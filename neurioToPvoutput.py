@@ -85,9 +85,6 @@ def main(argv):
         ltz = dateutil.tz.tzlocal()
         UTCtz = dateutil.tz.tzutc()
 
-        tp = neurio.TokenProvider(key=my_keys.key,
-                                       secret=my_keys.secret)
-        nc = neurio.Client(token_provider=tp)
         APIKEY=my_keys.APIKEY
         SYSTEMID=my_keys.SYSTEMID
 
@@ -113,6 +110,12 @@ def main(argv):
               print '-s print sensor id'
               print '-h print help info'
               print '-t dHrs - dHrs = number of hours in the past go get the neurio data'
+              sys.exit(0)
+
+        # get the Neurio token
+        tp = neurio.TokenProvider(key=my_keys.key,
+                                       secret=my_keys.secret)
+        nc = neurio.Client(token_provider=tp)
 
         #read the sensor Id 
         if getSensorId:
