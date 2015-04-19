@@ -4,6 +4,7 @@ Python script to upload neur.io generation and consumption data to pvoutput.org
 ## Installation
 1.  Install required packages (see section below)
   * Neurio Python
+  * python package dateutil
 2.  Download this package
   *   git clone https://github.com/czechmark/neurioToPvoutput
 3.  Install your neurio and pvoutput api keys, systemids,.. example for linus
@@ -46,7 +47,14 @@ You are only allowed to upload data that is either younger than 14 days(no donat
 Each command will upload 24 hours of data starting 96 hrs in the past, 73 hrs in the past ... I didn't space them by 24 hours just so I didn't miss one update because time elapses between the calls.
 
 ## required packages
-Neurio Python
+* python package dateutil
+* Neurio Python
+
+### Python dateutil Package Installation
+The easiest way to install the module is via pip:
+
+    $ sudo pip install python-dateutil
+    
 ### Neurio Python Installation
 
 The easiest way to install the module is via pip:
@@ -60,9 +68,8 @@ Or, clone the source repository and install it by hand:
     $ sudo python setup.py install
     
 ## ERRORs
-When I first installed and tried to run the neurio-python library, I got an error complaining about "SSL InsecurePlatform".  In order to fix that I had to do the following (debian)
+When I first installed and tried to run the neurio-python library, I got an error complaining about "SSL InsecurePlatform".  In order to fix that I had to do the following (debian).  What you have to do may vary depending on how your linus and python are installed.  In any case, the InsecurePlatform is actually just a warning and I think the system will still work if you are getting that warning.
 ```
-  sudo apt-get install libffi-dev 
-  sudo apt-get install libssl-dev
+  sudo apt-get install build-essential libssl-dev libffi-dev python-dev
   sudo pip install requests[security]
   ```
