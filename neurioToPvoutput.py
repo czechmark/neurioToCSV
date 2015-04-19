@@ -139,17 +139,9 @@ def main(argv):
         stimeString = stime.astimezone(UTCtz).strftime("%Y-%m-%dT%H:%M:%S")
         etimeString = etime.astimezone(UTCtz).strftime("%Y-%m-%dT%H:%M:%S")
 
-        #sample = getData(nc,my_keys.sensor_id)
-        #print sample
-        #print nc.get_appliances(my_keys.location_id)
-        #print nc.get_samples(my_keys.sensor_id,"2015-04-16T15:26:36","minutes","2015-04-16T15:41:36",5)
-        #stats = nc.get_samples_stats(my_keys.sensor_id,"2014-04-17T03:54:55","minutes","2014-04-17T04:24:55",5)
-        #print stats
+        #read the data from neurio
         stats = nc.get_samples_stats(my_keys.sensor_id,stimeString,"minutes",etimeString,5)
-        #print stats
-        #jsonResponse=json.loads(stats)
-        #print jsonResponse
-        #jsonData = jsonResponse["data"]
+
         cnt = 0;
         batchString=''
 
