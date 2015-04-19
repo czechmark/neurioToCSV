@@ -57,4 +57,10 @@ Or, clone the source repository and install it by hand:
     $ cd neurio-python
     $ sudo python setup.py install
     
-    
+## ERRORs
+When I first installed and tried to run the neurio-python library, I got an error complaining about "SSL InsecurePlatform".  In order to fix that I had to do the following (debian)
+```
+  sudo apt-get install libffi-dev 
+  sudo apt-get install libssl-dev
+  sudo pip install requests[security]
+  ```
