@@ -15,7 +15,7 @@ Python script to upload neur.io generation and consumption data to pvoutput.org
     * change DONATION to True if you have donated to Pvoutput
     * save your changes and exit from the editor
 4.  Determine your system_id 
-  1. run ./neurioToPvoutput.py -s to read have the system read your system Id
+  1. run ./neurioToPvoutput.py -s to  have the system read your system Id
   2. if you get an error like 'access token' this means your neurio apikey data is incorrect
   3. if you don't get an error copy the sensor id into my_keys (using method in 3 above)
 
@@ -32,6 +32,8 @@ Python script to upload neur.io generation and consumption data to pvoutput.org
 ```
 *this tells crontab to run every 5 minutes and execute the supplied script - neurio.sh.
     If you look inside neurio.sh, you will see that it tells the python script to upload the last two hours of data to pvoutput.  This should allow for system interruptions so that the chances of losing data is minimized.
+## Setting up pvoutput
+The only real suggestion I have is to set the update rate to 5 minutes
 ## Getting your old data into pvoutput
 You are only allowed to upload data that is either younger than 14 days(no donation) or 90 days (donation mode).  If you want to load old data then run the script by hand in a series of commands like this.
 ```
