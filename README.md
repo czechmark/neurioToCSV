@@ -5,7 +5,7 @@ Python script to upload neur.io generation and consumption data to pvoutput.org
 1.  Install required packages (see section below)
   * Neurio Python
 2.  Download this package
-  *  git clone httpr://github.com/czechmark/neurioToPvoutput neurioToPvoutput
+  *   git clone https://github.com/czechmark/neurioToPvoutput
 3.  Install your neurio and pvoutput api keys, systemids,.. example for linus
   1. cd neurioToPvoutput
   2. nano my_keys.py  (or any other editor) 
