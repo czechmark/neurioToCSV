@@ -1,5 +1,5 @@
 # neurioToCSV
-Python script to upload neur.io generation and consumption data to pvoutput.org
+Python script to output neur.io generation and consumption data to stdardoutput or a csv file
 
 ## Installation
 1.  Install required packages (see section below)
