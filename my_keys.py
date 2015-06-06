@@ -1,13 +1,7 @@
-#neur.io  info
-
-#key and secret API info from neurio
-key    = "fjkdsljkfldsfjdklsjjjj"
-secret = "fjdkslfjkdlsjfkdlsxxxx"
-#sensor id get by running ./neurioToPvoutput.py -s
-sensor_id = "0x0000ABCDE0123455"
-
-#pvoutput.org info
-
-SYSTEMID = "12345"
-APIKEY = "deaddeaddeaddeadbeefbeefbeefbeefbeefdead"
-DONATION = False
+key    = "5_gOw4QRTjGDL_cM1xVQZg"
+secret = "oGh_-fpUQcO8zVj_4uDznw"
+sensor_id = "0x0000C47F5101934B"
+location_id = "5DKfZqPwQOutKEz2sUBLEg"
+SYSTEMID = "31164"
+APIKEY = "2a1fcd18919bad649d2983b492b219881191d271"
+DONATION=True
